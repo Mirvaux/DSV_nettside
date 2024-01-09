@@ -1,5 +1,6 @@
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import styles from './BlogHeader.module.css'
 
@@ -15,24 +16,33 @@ export default function BlogHeader({
   switch (level) {
     case 1:
       return (
-        <header className="mb-10 mt-16 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
+        <header className="mt-12 mb-8 flex flex-col items-center md:mb-12 md:flex-row md:justify-between sm:mb-8">
+          <Link href='/'>
+          <div className='flex flex-row'>
           <Image
-          className="h-auto w-full"
-          width={2000}
-          height={1000}
-          alt=""
+          className="h-12 w-12 mr-8 justify-center"
+          width={10}
+          height={10}
+          alt="Den Stille dal vel logo"
           src="/logo_w.png"
           sizes="100vw"
-          priority={priority}
           />
-          <h1 className="text-6xl font-bold leading-tight tracking-tighter md:pr-8 md:text-8xl">
+          <h1 className="text-4xl text-center font-bold leading-tight tracking-tighter md:pr-4 md:pt-1 md:text-4xl">
             {title}
           </h1>
+          </div>
+          </Link>
+          
+          <div className='flex flex-row'>
           <h4
-            className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
+            className={`mt-5 text-lg md:pl-8 md:text-left ${styles.portableText}`}
           >
-            <PortableText value={description} />
+            {/* <PortableText value={description} /> */}
+            
           </h4>
+          <Link href="other/omvelforeningen/" className='mx-4'>Om velforeningen</Link>
+          <Link href="/" className='mx-4'></Link>
+          </div>
         </header>
       )
 
