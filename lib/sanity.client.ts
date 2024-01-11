@@ -15,6 +15,8 @@ import {
   settingsQuery,
   type Other,
   otherBySlugQuery,
+  indexOtherQuery,
+  otherSlugsQuery,
 } from 'lib/sanity.queries'
 import { createClient, type SanityClient } from 'next-sanity'
 
@@ -59,12 +61,12 @@ export async function getAllPostsSlugs(): Promise<Pick<Post, 'slug'>[]> {
 }
 
 export async function getAllOthers(client: SanityClient): Promise<Other[]> {
-  return (await client.fetch(indexQuery)) || [];
+  return (await client.fetch(indexOtherQuery)) || [];
 }
 
 export async function getAllOtherSlugs(): Promise<Pick<Post, 'slug'>[]> {
   const client = getClient()
-  const slugs = (await client.fetch<string[]>(postSlugsQuery)) || []
+  const slugs = (await client.fetch<string[]>(otherSlugsQuery)) || []
   return slugs.map((slug) => ({ slug }))
 }
 

@@ -9,9 +9,8 @@ import PostTitle from 'components/PostTitle'
 import SectionSeparator from 'components/SectionSeparator'
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import { otherBySlugQuery, Settings } from 'lib/sanity.queries';
 import { getClient } from 'lib/sanity.client';
-import type { Other } from 'lib/sanity.queries';
+import type { Other, Settings } from 'lib/sanity.queries';
 import { notFound } from 'next/navigation'
 import * as demo from 'lib/demo.data'
 
@@ -24,30 +23,27 @@ interface OtherPageProps {
 
 
 export default function OtherPage(props: OtherPageProps) {
-    const { preview, loading, otherData } = props
+    const { preview, loading, otherData, settings } = props
     const { title = demo.title } = settings || {}
   
     const slug = otherData?.slug
   
+    console.log("Loggin settings in OtherPage.ts", settings);
+
     if (!slug && !preview) {
       notFound()
     }
 
-const OtherPage: React.FC<OtherPageProps> = ({ otherData }) => {
-  const router = useRouter();
-
-  if (!router.isFallback && !otherData?.slug) {
-    return <Error statusCode={404} />;
-  }
+    console.log("Next -> Rendering OtherPage component with data:", otherData);
 
   return (
     <>
-      <PostPageHead settings={settings} post={post} />
+      <OtherPageHead settings={settings} post={otherData} />
 
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} level={1} />
-          {preview && !post ? (
+          {preview && !otherData ? (
             <PostTitle>Loading…</PostTitle>
           ) : (
             <>
@@ -68,26 +64,3 @@ const OtherPage: React.FC<OtherPageProps> = ({ otherData }) => {
     </>
   );
 };
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const data = await getClient().fetch(otherBySlugQuery, {
-    slug: params?.slug,
-  });
-
-  return {
-    props: {
-      otherData: data || null,
-    },
-  };
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await getClient().fetch(allOtherSlugsQuery);
-
-  return {
-    paths: paths.map((path) => ({ params: { slug: path.slug } })),
-    fallback: true,
-  };
-};
-
-export default OtherPage;

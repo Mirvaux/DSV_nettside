@@ -1,14 +1,17 @@
 // pages/other/[slug].tsx
+import OtherPage from 'components/OtherPage'
+import PreviewOtherPage from 'components/PreviewOtherPage'
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { getClient } from 'lib/sanity.client';
-import { Other } from 'lib/sanity.queries';
+import { Other, Settings } from 'lib/sanity.queries';
 
 interface OtherPageProps {
   other: Other;
+  settings: Settings;
 }
 
-export default function OtherPage({ other }: OtherPageProps) {
+export default function RenderOtherPage({ other }: OtherPageProps) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -18,7 +21,7 @@ export default function OtherPage({ other }: OtherPageProps) {
   return (
     <div>
       <h1>{other.title}</h1>
-      {/* Render other body or content */}
+        <OtherPage otherData={other} settings={settings} />
     </div>
   );
 }
@@ -32,6 +35,8 @@ export const getStaticProps: GetStaticProps<OtherPageProps, { slug: string }> = 
   if (!other) {
     return { notFound: true };
   }
+
+  console.log(other);
 
   return {
     props: {

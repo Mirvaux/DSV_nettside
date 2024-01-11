@@ -62,22 +62,9 @@ export const otherSlugsQuery = groq`
 
 export const otherBySlugQuery = groq`
 *[_type == "other" && slug.current == $slug][0] {
-  ${postFields}
+  ${otherFields}
 }
 `
-
-export type Other = {
-  _id: string
-  title?: string
-  coverImage?: any
-  date?: string
-  _updatedAt?: string
-  excerpt?: string
-  author?: Author
-  slug?: string
-  content?: any
-};
-
 export interface Author {
   name?: string
   picture?: any
