@@ -41,7 +41,7 @@ export default function BlogHeader({
               {/* <PortableText value={description} /> */}
               
             </h4>
-            <Link href="posts/om_dsv" className='mx-4'>Om velforeningen</Link>
+            <Link href="/posts/om_dsv" className='mx-4'>Om velforeningen</Link>
             <Link href="/" className='mx-4'></Link>
             </div>
         </header>
