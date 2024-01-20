@@ -1,7 +1,7 @@
 import BlogMeta from 'components/BlogMeta'
 import * as demo from 'lib/demo.data'
 import { urlForImage } from 'lib/sanity.image'
-import { Post, Settings, Other } from 'lib/sanity.queries'
+import { Other,Post, Settings } from 'lib/sanity.queries'
 import Head from 'next/head'
 
 export interface PostPageHeadProps {
@@ -9,7 +9,7 @@ export interface PostPageHeadProps {
   post: Other
 }
 
-console.log("passed interface"));
+console.log("passed interface");
 
 export default function PostPageHead({ settings, post }: PostPageHeadProps) {
   const title = settings.title ?? demo.title

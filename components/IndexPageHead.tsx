@@ -19,7 +19,7 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
   return (
     <Head>
       <title>{title}</title>
-      <div>showing IndexPageHead.tsx</div>
+      {/* <div>showing IndexPageHead.tsx</div> */}
       <BlogMeta />
       <meta
         key="description"

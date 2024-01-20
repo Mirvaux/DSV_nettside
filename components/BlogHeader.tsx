@@ -33,16 +33,17 @@ export default function BlogHeader({
           </div>
           </Link>
           
-          <div className='flex flex-row'>
-          <h4
-            className={`mt-5 text-lg md:pl-8 md:text-left ${styles.portableText}`}
-          >
-            {/* <PortableText value={description} /> */}
-            
-          </h4>
-          <Link href="other/omvelforeningen/" className='mx-4'>Om velforeningen</Link>
-          <Link href="/" className='mx-4'></Link>
-          </div>
+            <div className='flex flex-row'>
+            <h4
+              className={`mt-5 text-lg md:pl-8 md:text-left ${styles.portableText}`}
+            >
+
+              {/* <PortableText value={description} /> */}
+              
+            </h4>
+            <Link href="posts/om_dsv" className='mx-4'>Om velforeningen</Link>
+            <Link href="/" className='mx-4'></Link>
+            </div>
         </header>
       )
 

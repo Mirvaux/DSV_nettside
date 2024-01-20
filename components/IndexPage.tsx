@@ -27,7 +27,9 @@ export default function IndexPage(props: IndexPageProps) {
         <Container>
           
           <BlogHeader title={title} description={description} level={1} />
-          <div>indexPage.tsx</div>
+          
+          {/* <div>indexPage.tsx</div> */}
+          
           <div className='mx-20'>  
             {heroPost && (
               <HeroPost

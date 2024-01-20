@@ -93,6 +93,7 @@ export default defineType({
       to: [{ type: authorType.name }],
     }),
   ],
+
   preview: {
     select: {
       title: 'title',

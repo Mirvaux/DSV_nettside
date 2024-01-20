@@ -7,6 +7,7 @@ import PostHeader from 'components/PostHeader'
 import PostPageHead from 'components/PostPageHead'
 import PostTitle from 'components/PostTitle'
 import SectionSeparator from 'components/SectionSeparator'
+import OtherPageHead from 'components/OtherPageHead'
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { getClient } from 'lib/sanity.client';
@@ -21,20 +22,19 @@ interface OtherPageProps {
   settings: Settings
 }
 
+console.log("Logging settings in OtherPage.ts", settings);
 
 export default function OtherPage(props: OtherPageProps) {
-    const { preview, loading, otherData, settings } = props
-    const { title = demo.title } = settings || {}
-  
-    const slug = otherData?.slug
-  
-    console.log("Loggin settings in OtherPage.ts", settings);
+  const { preview, loading, otherData, settings } = props;
+  const { title = demo.title } = settings || {};
+  const slug = otherData?.slug;
 
-    if (!slug && !preview) {
-      notFound()
-    }
+  
+  console.log("Next -> Rendering OtherPage component with data:", otherData);
 
-    console.log("Next -> Rendering OtherPage component with data:", otherData);
+  if (!slug && !preview) {
+    notFound();
+  }
 
   return (
     <>
