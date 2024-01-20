@@ -33,7 +33,7 @@ export default function BlogHeader({
           </div>
           </Link>
           
-            <div className='flex flex-row'>
+            <div className='hidden md:flex flex-row'>
             <h4
               className={`mt-5 text-lg md:pl-8 md:text-left ${styles.portableText}`}
             >
