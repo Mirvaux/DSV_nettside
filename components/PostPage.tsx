@@ -43,6 +43,7 @@ export default function PostPage(props: PostPageProps) {
           ) : (
             <>
               <article>
+                <div className='mx-20'>
                 <PostHeader
                   title={post.title}
                   coverImage={post.coverImage}
@@ -50,6 +51,7 @@ export default function PostPage(props: PostPageProps) {
                   author={post.author}
                 />
                 <PostBody content={post.content} />
+                </div>
               </article>
               <SectionSeparator />
               {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
