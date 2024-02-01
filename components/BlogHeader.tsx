@@ -16,7 +16,7 @@ export default function BlogHeader({
   switch (level) {
     case 1:
       return (
-        <header className="mt-12 mb-8 flex flex-col items-center md:mb-12 md:flex-row md:justify-between sm:mb-8">
+        <header className="mt-12 mb-8 flex flex-col items-center md:mb-20 md:flex-row md:justify-between sm:mb-8">
           <Link href='/'>
           <div className='flex flex-row'>
           <Image
@@ -27,7 +27,7 @@ export default function BlogHeader({
           src="/logo_w.png"
           sizes="100vw"
           />
-          <h1 className="text-4xl text-center font-bold leading-tight tracking-tighter md:pr-4 md:pt-1 md:text-4xl">
+          <h1 className="font-hedvig-letters text-4xl text-center font-bold leading-tight tracking-normal md:pr-4 md:pt-1 md:text-4xl">
             {title}
           </h1>
           </div>

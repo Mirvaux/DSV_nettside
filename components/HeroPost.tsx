@@ -25,7 +25,7 @@ export default function HeroPost(
       
       <div className="mb-6 md:mb-6 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
-          <h3 className="mb-4 text-4xl leading-tight lg:text-6xl">
+          <h3 className="font-hedvig-letters tracking-normal mb-4 text-4xl leading-tight lg:text-6xl">
           <div className="mb-4 md:mb-4 flex-row md:flex-row">
             <CoverImage slug={slug} title={title} image={coverImage} priority />
             </div>

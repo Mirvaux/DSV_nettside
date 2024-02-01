@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+import '../custom.css';
 
 import { AppProps } from 'next/app'
 import { lazy, Suspense } from 'react'
