@@ -39,6 +39,7 @@ module.exports = {
       fontFamily: {
         'dm-sans': ['DM Sans', 'sans-serif'],
         'hedvig-letters': ['Hedvig Letters Serif', 'serif'],
+        'karla': ['Karla', 'sans-serif'],
       },
     },
   },

@@ -16,7 +16,7 @@ export default function BlogHeader({
   switch (level) {
     case 1:
       return (
-        <header className="mt-12 mb-8 flex flex-col items-center md:mb-20 md:flex-row md:justify-between sm:mb-8">
+        <header className="mt-12 mb-8 flex flex-col items-center md:mb-12 md:flex-row md:justify-between sm:mb-8">
           <Link href='/'>
           <div className='flex flex-row'>
           <Image

@@ -31,8 +31,9 @@ export default function PostPreview({
       </div>
       </h3>
       
-      {excerpt && <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>}
+      {excerpt && <p className="font-montserrat mb-4 text-lg leading-relaxed">{excerpt}</p>}
       {author && <Avatar name={author.name} picture={author.picture} />}
+      
     </div>
   )
 }
