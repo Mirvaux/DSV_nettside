@@ -25,7 +25,7 @@ export default function HeroPost(
       
       <div className="mb-6 md:mb-6 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 p-5">
         
-        <div className='p-4 rounded-md hover:border-b-4 border-slate-200 hover:cursor-pointer'>
+        <div className='p-4 rounded-md hover:border-b-4 border-slate-200 hover:cursor-pointer sm:mb-6'>
           <h3 className="font-hedvig-letters tracking-normal mb-4 text-4xl leading-tight lg:text-6xl">
           <div className="mb-4 md:mb-4 flex-row md:flex-row">
             <CoverImage slug={slug} title={title} image={coverImage} priority />
@@ -48,7 +48,8 @@ export default function HeroPost(
           
         </div>
         
-        {/* <div className='font-karla shadow-md p-4 hover:bg-teal-200 rounded-lg'>Bidra til DSV's arbeid:<br /><br />Vipps</div> */}
+        {/* <div className='invisible md:visible font-karla shadow-md p-4 hover:bg-teal-200 rounded-lg hover:cursor-pointer'>Bidra til DSV's arbeid:<br /><br />Vipps</div>
+         */}
       </div>
 
       

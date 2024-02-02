@@ -27,6 +27,7 @@ export default function IndexPage(props: IndexPageProps) {
         <Container>
           
           <BlogHeader title={title} description={description} level={1} />
+          <hr className="mb-6 mt-10 border-accent-2" />
           
           {/* <div>Showing indexPage.tsx</div> */}
           

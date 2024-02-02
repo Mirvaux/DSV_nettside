@@ -38,6 +38,7 @@ export default function PostPage(props: PostPageProps) {
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} level={1} />
+          <hr className="mb-12 mt-10 border-accent-2" />
           {preview && !post ? (
             <PostTitle>Loading…</PostTitle>
           ) : (
