@@ -44,7 +44,7 @@ export default function PostPage(props: PostPageProps) {
           ) : (
             <>
               <article>
-                <div className='md:mx-20'>
+                <div className='mx-2 md:mx-20'>
                 <PostHeader
                   title={post.title}
                   coverImage={post.coverImage}

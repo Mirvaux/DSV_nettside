@@ -31,7 +31,7 @@ export default function IndexPage(props: IndexPageProps) {
           
           {/* <div>Showing indexPage.tsx</div> */}
           
-          <div className='mx-20'>  
+          <div className='md:mx-20'>  
             {heroPost && (
               <HeroPost
                 title={heroPost.title}
