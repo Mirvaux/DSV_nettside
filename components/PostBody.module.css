@@ -17,6 +17,10 @@
   @apply mb-4 mt-8 text-2xl leading-snug;
 }
 
+.portableText h5 {
+  @apply font-hedvig-letters mb-4 mt-8 text-2xl leading-snug;
+}
+
 .portableText a {
   @apply text-blue-500 underline;
 }

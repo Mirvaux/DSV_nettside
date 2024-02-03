@@ -16,18 +16,18 @@ export default function BlogHeader({
   switch (level) {
     case 1:
       return (
-        <header className="mt-12 mb-8 flex flex-col items-center md:mb-12 md:flex-row md:justify-between sm:mb-8">
+        <header className="mt-12 mb-8 mx-1 md:mx-0 flex flex-col items-center md:mb-12 md:flex-row md:justify-between sm:mb-8">
           <Link href='/'>
-          <div className='flex flex-row'>
+          <div className='flex flex-column sm:flex-row'>
           <Image
-          className="h-12 w-12 mr-8 justify-center"
+          className="h-12 w-12 mx-8 justify-center"
           width={10}
           height={10}
           alt="Den Stille dal vel logo"
           src="/logo_w.png"
           sizes="100vw"
           />
-          <h1 className="font-hedvig-letters text-4xl text-center font-bold leading-tight tracking-normal md:pr-4 md:pt-1 md:text-4xl">
+          <h1 className="font-hedvig-letters text-xl sm:text-4xl text-center font-bold leading-tight tracking-normal md:pr-4 md:pt-1 md:text-4xl">
             {title}
           </h1>
           </div>
