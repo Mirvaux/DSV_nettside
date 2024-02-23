@@ -1,7 +1,6 @@
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 import Image from 'next/image'
-
 import styles from './BlogHeader.module.css'
 
 export default function BlogHeader({
@@ -27,7 +26,7 @@ export default function BlogHeader({
           src="/logo_w.png"
           sizes="100vw"
           />
-          <h1 className="font-hedvig-letters text-xl sm:text-4xl text-center font-bold leading-tight tracking-normal md:pr-4 md:pt-1 md:text-4xl">
+          <h1 className="font-cormorant text-xl sm:text-4xl text-center leading-tight tracking-normal md:pr-4 md:pt-1 md:text-4xl">
             {title}
           </h1>
           </div>
@@ -41,6 +40,7 @@ export default function BlogHeader({
               {/* <PortableText value={description} /> */}
               
             </h4>
+
             <Link href="/posts/om_dsv" className='mx-4'>Om velforeningen</Link>
             <Link href="/" className='mx-4'></Link>
             </div>
@@ -50,7 +50,7 @@ export default function BlogHeader({
     case 2:
       return (
         <header>
-          <h2 className="mb-20 mt-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
+          <h2 className="font-cormorant mb-20 mt-8 text-2xl leading-tight tracking-tight md:text-4xl md:tracking-tighter">
             <Link href="/" className="hover:underline">
               {title}
             </Link>

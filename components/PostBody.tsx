@@ -22,6 +22,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
       return <SanityImage {...value} />
     },
   },
+  
 }
 
 export default function PostBody({ content }) {

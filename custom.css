@@ -1,10 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300&family=Hedvig+Letters+Serif:opsz@12..24&family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 
 @layer utilities {
-    font-hedvig-letters {
+    .font-hedvig-letters {
         font-family: 'Hedvig Letters Serif', serif;
     }
-  }
+    .font-cormorant {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .font-karla {
+        font-family: 'Karla', sans-serif;
+    }
+}

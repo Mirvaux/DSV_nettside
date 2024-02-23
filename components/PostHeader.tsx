@@ -10,7 +10,9 @@ export default function PostHeader(
   const { title, coverImage, date, author, slug } = props
   return (
     <>      
+      <div className="mt-8">
       <PostTitle>{title}</PostTitle>
+      </div>
       <div className="hidden md:mb-12 md:block">
         {author && <Avatar name={author.name} picture={author.picture} />}
       </div>
@@ -21,7 +23,7 @@ export default function PostHeader(
         <div className="mb-6 block md:hidden">
           {author && <Avatar name={author.name} picture={author.picture} />}
         </div>
-        <div className="mb-6 text-lg">
+        <div className="font-cormorant mb-6 text-gray-500">
           <Date dateString={date} />
         </div>
       </div>

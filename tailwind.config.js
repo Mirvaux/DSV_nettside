@@ -40,6 +40,7 @@ module.exports = {
         'dm-sans': ['DM Sans', 'sans-serif'],
         'hedvig-letters': ['Hedvig Letters Serif', 'serif'],
         'karla': ['Karla', 'sans-serif'],
+        'cormorant': ['Cormorant Garamond', 'serif'],
       },
     },
   },

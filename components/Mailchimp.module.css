@@ -1,0 +1,63 @@
+/* MailchimpForm.module.css */
+.mc_embed_signup {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mc_embed_signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mc_embed_signup h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.mc-field-group {
+    margin-bottom: 15px;
+}
+
+.mc-field-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.mc-field-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.indicates-required .asterisk, .mc-field-group .asterisk {
+    color: #d9534f;
+}
+
+.button {
+    background-color: #151515;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1a1a1a;
+}
+
+.helper_text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.875rem;
+    color: #666;
+}

@@ -14,16 +14,16 @@
 }
 
 .portableText h3 {
-  @apply mb-4 mt-8 text-2xl leading-snug;
+  @apply font-cormorant mb-4 mt-8 text-2xl leading-snug;
 }
 
 .portableText h5 {
-  @apply font-hedvig-letters mb-4 mt-8 text-2xl leading-snug;
+  @apply font-cormorant mb-4 mt-8 text-2xl leading-snug tracking-wide;
 }
 
 .portableText a {
-  @apply text-blue-500 underline;
+  @apply text-gray-800 underline;
 }
 .portableText a:hover {
-  @apply text-blue-800;
+  @apply text-orange-500;
 }
