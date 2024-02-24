@@ -40,7 +40,7 @@ export default function BlogHeader({
               {/* <PortableText value={description} /> */}
               
             </h4>
-
+            <Link href="https://mailchi.mp/b6cd2dfd4566/den-stille-dal-vel-mailingliste" className='mx-4'>Mailingliste</Link>
             <Link href="/posts/om_dsv" className='mx-4'>Om velforeningen</Link>
             <Link href="/" className='mx-4'></Link>
             </div>
