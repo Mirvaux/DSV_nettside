@@ -23,7 +23,7 @@ export default function PostPreview({
         />
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+        <Link href={`/posts/${slug}`} className="font-cormorant hover:underline">
           {title}
         </Link>
         <div className="mb-2 text-sm md:mb-0">
@@ -31,7 +31,7 @@ export default function PostPreview({
       </div>
       </h3>
       
-      {excerpt && <p className="font-montserrat mb-4 text-lg leading-relaxed">{excerpt}</p>}
+      {excerpt && <p className="font-karla mb-4 text-lg leading-relaxed">{excerpt}</p>}
       {author && <Avatar name={author.name} picture={author.picture} />}
       
     </div>
